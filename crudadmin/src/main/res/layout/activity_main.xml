@@ -8,11 +8,10 @@
     android:background="@drawable/adminbkg"
     tools:context=".MainActivity">
 
-
     <EditText
+        android:id="@+id/searchPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/searchPhone"
         android:layout_marginTop="300dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
@@ -21,23 +20,68 @@
         android:hint="Enter phone number"
         android:textSize="20sp"
         android:textColor="@color/lavender"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
+        android:id="@+id/searchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/searchButton"
         android:text="Search"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:layout_marginTop="30dp"
         android:padding="12dp"
-        app:cornerRadius = "20dp"
-        app:layout_constraintEnd_toEndOf="@id/searchPhone"
+        app:cornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@id/searchPhone"
         app:layout_constraintStart_toStartOf="@id/searchPhone"
-        app:layout_constraintTop_toBottomOf="@id/searchPhone"/>
+        app:layout_constraintEnd_toEndOf="@id/searchPhone" />
+
+    <!-- Botón "Upload" -->
+    <Button
+        android:id="@+id/mainUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:padding="12dp"
+        app:cornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@id/searchButton"
+        app:layout_constraintStart_toStartOf="@id/searchButton"
+        app:layout_constraintEnd_toEndOf="@id/searchButton" />
+
+    <!-- ✅ Botón "Update" agregado -->
+    <Button
+        android:id="@+id/mainUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:padding="12dp"
+        app:cornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@id/mainUpload"
+        app:layout_constraintStart_toStartOf="@id/mainUpload"
+        app:layout_constraintEnd_toEndOf="@id/mainUpload" />
+
+    <!-- ✅ Botón "Delete" agregado -->
+    <Button
+        android:id="@+id/mainDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:padding="12dp"
+        app:cornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@id/mainUpdate"
+        app:layout_constraintStart_toStartOf="@id/mainUpdate"
+        app:layout_constraintEnd_toEndOf="@id/mainUpdate" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -48,9 +92,9 @@
         android:layout_marginEnd="24dp"
         android:layout_marginTop="60dp"
         android:background="@drawable/lavender_border"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainDelete"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/searchButton">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -68,24 +112,24 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/name"
                     android:layout_weight="1"
                     android:text="Name"
                     android:textStyle="bold"
                     android:textColor="@color/lavender"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
 
                 <TextView
+                    android:id="@+id/readName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/readName"
                     android:text=""
                     android:layout_weight="1"
                     android:textAlignment="viewEnd"
                     android:textColor="@color/lavender"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
 
             </LinearLayout>
 
@@ -94,7 +138,7 @@
                 android:layout_height="1dp"
                 android:layout_margin="10dp"
                 android:alpha="0.5"
-                android:background="@color/lavender"/>
+                android:background="@color/lavender" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -104,24 +148,24 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/operator"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/operator"
                     android:layout_weight="1"
                     android:text="Operator"
                     android:textStyle="bold"
                     android:textColor="@color/lavender"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
 
                 <TextView
+                    android:id="@+id/readOperator"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/readOperator"
                     android:text=""
                     android:layout_weight="1"
                     android:textAlignment="viewEnd"
                     android:textColor="@color/lavender"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
 
             </LinearLayout>
 
@@ -130,7 +174,7 @@
                 android:layout_height="1dp"
                 android:layout_margin="10dp"
                 android:alpha="0.5"
-                android:background="@color/lavender"/>
+                android:background="@color/lavender" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -140,27 +184,31 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/location"
                     android:layout_weight="1"
                     android:text="Location"
                     android:textStyle="bold"
                     android:textColor="@color/lavender"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
 
                 <TextView
+                    android:id="@+id/readLocation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/readLocation"
                     android:text=""
                     android:layout_weight="1"
                     android:textAlignment="viewEnd"
                     android:textColor="@color/lavender"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
 
             </LinearLayout>
+
         </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

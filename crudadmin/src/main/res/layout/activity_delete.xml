@@ -4,12 +4,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/main"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/deletebkg"
     tools:context=".DeleteActivity">
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,7 +16,6 @@
         android:layout_marginTop="300dp"
         android:layout_gravity="center_horizontal"
         android:padding="20dp">
-
         <EditText
             android:layout_width="match_parent"
             android:layout_height="60dp"
@@ -30,8 +28,6 @@
             android:hint="Enter phone number"
             android:gravity="start|center_vertical"
             android:textColor="@color/lavender"/>
-
-
         <Button
             android:layout_width="match_parent"
             android:layout_height="60dp"
@@ -43,7 +39,5 @@
             android:layout_marginEnd="10dp"
             android:backgroundTint="@color/lavender"
             app:cornerRadius = "20dp"/>
-
     </LinearLayout>
-
 </LinearLayout>
