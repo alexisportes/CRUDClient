@@ -20,18 +20,15 @@ class MainActivity : AppCompatActivity() {
 
         enableEdgeToEdge()
 
-        // Inflar binding y configurar el layout
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Mantener diseño y paddings del sistema
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // Lógica del botón de búsqueda
         binding.searchButton.setOnClickListener {
             val searchPhone: String = binding.searchPhone.text.toString()
             if (searchPhone.isNotEmpty()) {

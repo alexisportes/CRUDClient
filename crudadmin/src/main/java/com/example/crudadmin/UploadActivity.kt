@@ -33,29 +33,28 @@ class UploadActivity : AppCompatActivity() {
 
             databaseReference = FirebaseDatabase.getInstance().getReference("phone Directory")
 
-
             val phoneDirectory = HashMap<String, String>()
             phoneDirectory["name"] = name
             phoneDirectory["operator"] = operator
             phoneDirectory["location"] = location
             phoneDirectory["phone"] = phone
 
-            databaseReference.push().setValue(phoneDirectory)
+            // ✅ Aquí la corrección: usamos el número de teléfono como clave
+            databaseReference.child(phone).setValue(phoneDirectory)
                 .addOnSuccessListener {
-                    // Aquí puedes limpiar los campos o mostrar un mensaje
                     binding.uploadName.text.clear()
                     binding.uploadOperator.text.clear()
                     binding.uploadLocation.text.clear()
                     binding.uploadPhone.text.clear()
 
-                    Toast.makeText(this, "Saved",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show()
 
                     val intent = Intent(this@UploadActivity, MainActivity::class.java)
                     startActivity(intent)
                     finish()
                 }
                 .addOnFailureListener {
-                    Toast.makeText(this, "Faild",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
                 }
         }
 
