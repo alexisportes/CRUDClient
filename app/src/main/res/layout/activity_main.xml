@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/main"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/crudread"
+    android:background="@drawable/readbkg"
     tools:context=".MainActivity">
 
     <!-- Campo para buscar por número de teléfono -->
@@ -21,6 +21,7 @@
         android:background="@drawable/levender_border"
         android:hint="Enter phone number"
         android:textSize="20sp"
+        android:textColorHint="@color/lavender"
         android:textColor="@color/lavender"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,8 +32,8 @@
         android:id="@+id/searchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="search"
-        android:textColor="@color/white"
+        android:text="Search"
+        android:textColor="@android:color/white"
         android:textSize="18sp"
         android:padding="12dp"
         android:layout_marginTop="20dp"
@@ -83,12 +84,12 @@
                 android:textSize="18sp" />
         </LinearLayout>
 
-        <androidx.appcompat.widget.AppCompatImageView
+        <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_margin="10dp"
-            android:alpha="0.5"
-            android:background="@color/lavender" />
+            android:layout_marginHorizontal="10dp"
+            android:background="@color/lavender"
+            android:alpha="0.5" />
 
         <!-- Operador -->
         <LinearLayout
@@ -117,12 +118,12 @@
                 android:textSize="18sp" />
         </LinearLayout>
 
-        <androidx.appcompat.widget.AppCompatImageView
+        <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_margin="10dp"
-            android:alpha="0.5"
-            android:background="@color/lavender" />
+            android:layout_marginHorizontal="10dp"
+            android:background="@color/lavender"
+            android:alpha="0.5" />
 
         <!-- Ubicación -->
         <LinearLayout
@@ -150,7 +151,7 @@
                 android:textColor="@color/lavender"
                 android:textSize="18sp" />
         </LinearLayout>
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

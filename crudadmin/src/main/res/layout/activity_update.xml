@@ -9,6 +9,7 @@
     android:gravity="center_vertical"
     android:background="@drawable/updatebkg"
     tools:context=".UpdateActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,6 +17,7 @@
         android:layout_marginTop="300dp"
         android:layout_gravity="center_horizontal"
         android:padding="20dp">
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="60dp"
@@ -28,6 +30,7 @@
             android:hint="Enter phone number"
             android:gravity="start|center_vertical"
             android:textColor="@color/lavender"/>
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="60dp"
@@ -40,6 +43,7 @@
             android:hint="Enter name"
             android:gravity="start|center_vertical"
             android:textColor="@color/lavender"/>
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="60dp"
@@ -52,6 +56,7 @@
             android:hint="Enter operator"
             android:gravity="start|center_vertical"
             android:textColor="@color/lavender"/>
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="60dp"
@@ -64,6 +69,7 @@
             android:hint="Enter location"
             android:gravity="start|center_vertical"
             android:textColor="@color/lavender"/>
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="60dp"
@@ -75,5 +81,7 @@
             android:layout_marginEnd="10dp"
             android:backgroundTint="@color/lavender"
             app:cornerRadius = "20dp"/>
+
     </LinearLayout>
+
 </LinearLayout>

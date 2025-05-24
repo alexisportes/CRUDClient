@@ -2,11 +2,11 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
 
+    <solid android:color="#FFFFFF"/> <!-- Fondo blanco -->
+
     <stroke
         android:width="2dp"
-        android:color="@color/lavender" />
+        android:color="@color/lavender"/> <!-- Borde lavanda -->
 
-    <corners
-        android:radius="30dp" />
-
+    <corners android:radius="50dp"/> <!-- Bordes redondeados -->
 </shape>

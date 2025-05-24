@@ -1,7 +1,16 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.CRUDClient" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+<!-- res/values/themes.xml -->
+<resources>
+
+    <!-- Tema base para la app -->
+    <style name="Theme.CRUDClient" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Color primario de la app -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <!-- Color primario oscuro -->
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <!-- Color de acento -->
+        <item name="colorAccent">@color/teal_200</item>
+        <!-- Color de fondo -->
+        <item name="android:windowBackground">@color/white</item>
     </style>
+
 </resources>
